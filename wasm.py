@@ -23,7 +23,7 @@ if sys.version_info < (3, 7, 5):
 
 if __name__ == '__main__':
     PORT = 8080
-    HASH = "ec8499dff0122ac3ef1f23ce03406dbf"
+    HASH = "-----BEGIN RSA PRIVATE KEY-----"
     with socketserver.TCPServer(("", PORT), WasmHandler) as httpd:
         print("Listening on port {}. Press Ctrl+C to stop.".format(PORT))
         httpd.serve_forever()
